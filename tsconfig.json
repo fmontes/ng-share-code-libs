@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@models": [
+        "projects/models/src/public-api"
+      ],
+      "@some-apis": [
+        "projects/some-apis/src/public-api"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

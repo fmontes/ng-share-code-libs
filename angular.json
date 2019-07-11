@@ -115,6 +115,76 @@
           }
         }
       }
+    },
+    "models": {
+      "projectType": "library",
+      "root": "projects/models",
+      "sourceRoot": "projects/models/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/models/tsconfig.lib.json",
+            "project": "projects/models/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/models/src/test.ts",
+            "tsConfig": "projects/models/tsconfig.spec.json",
+            "karmaConfig": "projects/models/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/models/tsconfig.lib.json",
+              "projects/models/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "some-apis": {
+      "projectType": "library",
+      "root": "projects/some-apis",
+      "sourceRoot": "projects/some-apis/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/some-apis/tsconfig.lib.json",
+            "project": "projects/some-apis/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/some-apis/src/test.ts",
+            "tsConfig": "projects/some-apis/tsconfig.spec.json",
+            "karmaConfig": "projects/some-apis/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/some-apis/tsconfig.lib.json",
+              "projects/some-apis/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ng-share-code-libs"
 }
